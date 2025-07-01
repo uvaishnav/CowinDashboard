@@ -1,30 +1,6 @@
-In this project, let's build a **CoWIN Dashboard** by applying the concepts we have learned till now.
 
-### Refer to the images below:
 
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/cowin-dashbaord-output.gif" alt="" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
 
-**Failure View**
-
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/cowin-dashbaord-failure-view-output.gif" alt="cowin-dashboard-failure-view-output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
-
-### Design Files
-
-<details>
-<summary>Click to view</summary>
-
-- [Extra Large Devices (Size >= 1200px) - Success View](https://assets.ccbp.in/frontend/content/react-js/cowin-dashboard-xl-output.png)
-- [Extra Large Devices (Size >= 1200px) - Failure View](https://assets.ccbp.in/frontend/content/react-js/cowin-dashbaord-xl-failure-view-output.png)
-
-</details>
 
 ### Set Up Instructions
 
@@ -99,62 +75,6 @@ Returns a response containing the list of Products
 
 </details>
 
-<details>
-<summary>Components Structure</summary>
-
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/cowin-dashbaord-component-structure-breakdown.png" alt="component-breakdown-structure" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
-
-</details>
-
-<details>
-<summary>Implementation Files</summary>
-<br/>
-
-Use these files to complete the implementation:
-
-- `src/components/CowinDashboard/index.js`
-- `src/components/CowinDashboard/index.css`
-- `src/components/VaccinationCoverage/index.js`
-- `src/components/VaccinationCoverage/index.css`
-- `src/components/VaccinationByGender/index.js`
-- `src/components/VaccinationByGender/index.css`
-- `src/components/VaccinationByAge/index.js`
-- `src/components/VaccinationByAge/index.css`
-
-</details>
-
-### Important Note
-
-<details>
-<summary>Click to view</summary>
-
-<br/>
-
-**The following instructions are required for the tests to pass**
-
-- Wrap the Loader component with an HTML container element and add the `data-testid` attribute value as `loader` to it
-
-  ```jsx
-  <div data-testid="loader">
-    <Loader type="ThreeDots" color="#ffffff" height={80} width={80} />
-  </div>
-  ```
-
-- Provide `width` and `height` to the respective chart component to make the charts visible on the page <br> For example:
-
-  ```jsx
-  <BarChart width={1000} height={300} />
-  ```
-
-  - Provide `width` and `height` as **number**
-
-  - Achieve this CoWIN Dashboard on desktop devices. You can try different charts provided by the `recharts` package with customized data
-
-</details>
 
 ### Resources
 
@@ -195,9 +115,3 @@ Use these files to complete the implementation:
 
 </details>
 
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**.
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
