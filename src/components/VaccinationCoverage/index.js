@@ -4,7 +4,6 @@ import {
   XAxis,
   YAxis,
   CartesianGrid,
-  Tooltip,
   Legend,
   ResponsiveContainer,
 } from 'recharts'
@@ -32,7 +31,6 @@ const VaccinationCoverage = props => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="vaccine_date" />
           <YAxis />
-          <Tooltip />
           <Legend />
           <Bar dataKey="dose_1" fill="#f54394" />
           <Bar dataKey="dose_2" fill="#5a8dee" />

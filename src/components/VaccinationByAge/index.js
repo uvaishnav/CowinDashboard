@@ -55,13 +55,7 @@ const VaccinationByAge = props => {
               />
             ))}
           </Pie>
-          <Legend
-            iconSize={10}
-            width={100}
-            align="right"
-            verticalAlign="middle"
-            layout="vertical"
-          />
+          <Legend iconSize={10} />
         </PieChart>
       </ResponsiveContainer>
     </div>
