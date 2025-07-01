@@ -1,1 +1,212 @@
-/* Write your CSS here */
+.vaccination-coverage-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.vaccination-coverage-container:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.vaccination-coverage-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e3f2fd;
+  text-align: center;
+  margin: 0 0 2rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+/* Custom styles for Recharts components in dark theme */
+.vaccination-coverage-container .recharts-cartesian-grid-horizontal line,
+.vaccination-coverage-container .recharts-cartesian-grid-vertical line {
+  stroke: rgba(255, 255, 255, 0.1) !important;
+  stroke-dasharray: 3 3 !important;
+}
+
+.vaccination-coverage-container .recharts-cartesian-axis-line {
+  stroke: rgba(255, 255, 255, 0.3) !important;
+}
+
+.vaccination-coverage-container .recharts-cartesian-axis-tick-line {
+  stroke: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* XAxis and YAxis text styling */
+.vaccination-coverage-container .recharts-cartesian-axis-tick-value {
+  fill: #e3f2fd !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+}
+
+/* Legend styling */
+.vaccination-coverage-container .recharts-legend-wrapper {
+  color: #ffffff !important;
+  padding-top: 1rem !important;
+}
+
+.vaccination-coverage-container .recharts-legend-item-text {
+  color: #e3f2fd !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  text-transform: capitalize !important;
+}
+
+.vaccination-coverage-container .recharts-legend-item {
+  margin-right: 2rem !important;
+}
+
+/* Tooltip styling */
+.vaccination-coverage-container .recharts-tooltip-wrapper {
+  background: rgba(0, 0, 0, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+}
+
+.vaccination-coverage-container .recharts-tooltip-content {
+  background: transparent !important;
+  border: none !important;
+  color: #ffffff !important;
+}
+
+.vaccination-coverage-container .recharts-tooltip-label {
+  color: #4fc3f7 !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.5rem !important;
+  display: block !important;
+}
+
+.vaccination-coverage-container .recharts-tooltip-item-name {
+  color: #e3f2fd !important;
+  font-weight: 500 !important;
+}
+
+.vaccination-coverage-container .recharts-tooltip-item-value {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Bar hover effects */
+.vaccination-coverage-container .recharts-bar-rectangle:hover {
+  filter: brightness(1.1);
+  transition: filter 0.2s ease;
+}
+
+/* Responsive container height */
+.vaccination-coverage-container .recharts-responsive-container {
+  min-height: 350px;
+}
+
+@media screen and (max-width: 1024px) {
+  .vaccination-coverage-container {
+    padding: 1.5rem;
+  }
+
+  .vaccination-coverage-heading {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .vaccination-coverage-container .recharts-responsive-container {
+    min-height: 320px;
+  }
+
+  .vaccination-coverage-container .recharts-cartesian-axis-tick-value {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .vaccination-coverage-container {
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .vaccination-coverage-heading {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .vaccination-coverage-container .recharts-responsive-container {
+    min-height: 300px;
+  }
+
+  .vaccination-coverage-container .recharts-cartesian-axis-tick-value {
+    font-size: 0.7rem !important;
+  }
+
+  .vaccination-coverage-container .recharts-legend-item-text {
+    font-size: 0.8rem !important;
+  }
+
+  .vaccination-coverage-container .recharts-legend-item {
+    margin-right: 1.5rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .vaccination-coverage-container {
+    padding: 1rem;
+  }
+
+  .vaccination-coverage-heading {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .vaccination-coverage-container .recharts-responsive-container {
+    min-height: 280px;
+  }
+
+  .vaccination-coverage-container .recharts-cartesian-axis-tick-value {
+    font-size: 0.65rem !important;
+  }
+
+  .vaccination-coverage-container .recharts-legend-item-text {
+    font-size: 0.75rem !important;
+  }
+
+  .vaccination-coverage-container .recharts-legend-item {
+    margin-right: 1rem !important;
+  }
+
+  .vaccination-coverage-container .recharts-tooltip-content {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Animation for chart container */
+@keyframes fadeInChart {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vaccination-coverage-container {
+  animation: fadeInChart 0.8s ease-out;
+}
+
+/* Enhanced grid styling for better visibility */
+.vaccination-coverage-container .recharts-cartesian-grid {
+  opacity: 0.3;
+}
+
+/* Bar chart specific enhancements */
+.vaccination-coverage-container .recharts-bar {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}

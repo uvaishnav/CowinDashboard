@@ -1,1 +1,168 @@
-/* Write your CSS here */
+.vaccination-by-gender-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.vaccination-by-gender-container:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.vaccination-by-gender-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e3f2fd;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+/* Custom styles for Recharts Legend in dark theme */
+.vaccination-by-gender-container .recharts-legend-wrapper {
+  color: #ffffff !important;
+  padding-top: 1rem !important;
+}
+
+.vaccination-by-gender-container .recharts-legend-item-text {
+  color: #e3f2fd !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  text-transform: capitalize !important;
+}
+
+.vaccination-by-gender-container .recharts-legend-item {
+  margin-right: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Ensure pie chart text labels are visible */
+.vaccination-by-gender-container .recharts-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  fill: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Custom tooltip styling for dark theme */
+.vaccination-by-gender-container .recharts-tooltip-wrapper {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.vaccination-by-gender-container .recharts-tooltip-content {
+  background: transparent !important;
+  border: none !important;
+  color: #ffffff !important;
+}
+
+/* Legend positioning for semi-circle chart */
+.vaccination-by-gender-container .recharts-legend-wrapper {
+  position: relative !important;
+  margin-top: -20px !important;
+}
+
+/* Responsive container adjustments */
+.vaccination-by-gender-container .recharts-responsive-container {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .vaccination-by-gender-container {
+    padding: 1.5rem;
+  }
+
+  .vaccination-by-gender-heading {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .vaccination-by-gender-container .recharts-legend-wrapper {
+    margin-top: -15px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .vaccination-by-gender-container {
+    padding: 1.2rem;
+  }
+
+  .vaccination-by-gender-heading {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .vaccination-by-gender-container .recharts-legend-item-text {
+    font-size: 0.8rem !important;
+  }
+
+  .vaccination-by-gender-container .recharts-text {
+    font-size: 0.75rem;
+  }
+
+  .vaccination-by-gender-container .recharts-legend-item {
+    margin-right: 1rem !important;
+  }
+
+  .vaccination-by-gender-container .recharts-legend-wrapper {
+    margin-top: -10px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .vaccination-by-gender-container {
+    padding: 1rem;
+  }
+
+  .vaccination-by-gender-heading {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .vaccination-by-gender-container .recharts-legend-item-text {
+    font-size: 0.75rem !important;
+  }
+
+  .vaccination-by-gender-container .recharts-text {
+    font-size: 0.7rem;
+  }
+
+  .vaccination-by-gender-container .recharts-legend-item {
+    margin-right: 0.8rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  .vaccination-by-gender-container .recharts-legend-wrapper {
+    margin-top: -5px !important;
+  }
+}
+
+/* Animation for chart container */
+@keyframes fadeInChart {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vaccination-by-gender-container {
+  animation: fadeInChart 0.8s ease-out 0.2s both;
+}
+
+/* Hover effects for better interactivity */
+.vaccination-by-gender-container .recharts-pie-sector:hover {
+  filter: brightness(1.1);
+  transition: filter 0.2s ease;
+}

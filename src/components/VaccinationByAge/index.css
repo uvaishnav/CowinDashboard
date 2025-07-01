@@ -1,1 +1,126 @@
-/* Write your CSS here */
+.vaccination-age-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.vaccination-age-container:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.chart-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e3f2fd;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+/* Custom styles for Recharts Legend in dark theme */
+.vaccination-age-container .recharts-legend-wrapper {
+  color: #ffffff !important;
+}
+
+.vaccination-age-container .recharts-legend-item-text {
+  color: #e3f2fd !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+}
+
+.vaccination-age-container .recharts-legend-item {
+  margin-bottom: 0.5rem !important;
+}
+
+/* Ensure pie chart text is visible */
+.vaccination-age-container .recharts-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Custom tooltip styling for dark theme */
+.vaccination-age-container .recharts-tooltip-wrapper {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.vaccination-age-container .recharts-tooltip-content {
+  background: transparent !important;
+  border: none !important;
+  color: #ffffff !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .vaccination-age-container {
+    padding: 1.5rem;
+  }
+
+  .chart-heading {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .vaccination-age-container {
+    padding: 1.2rem;
+  }
+
+  .chart-heading {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .vaccination-age-container .recharts-legend-item-text {
+    font-size: 0.8rem !important;
+  }
+
+  .vaccination-age-container .recharts-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .vaccination-age-container {
+    padding: 1rem;
+  }
+
+  .chart-heading {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .vaccination-age-container .recharts-legend-item-text {
+    font-size: 0.75rem !important;
+  }
+
+  .vaccination-age-container .recharts-text {
+    font-size: 0.7rem;
+  }
+}
+
+/* Animation for chart container */
+@keyframes fadeInChart {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vaccination-age-container {
+  animation: fadeInChart 0.8s ease-out;
+}
